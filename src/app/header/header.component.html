@@ -1,1 +1,38 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand navbar-light ">
+    <a class="navbar-brand mx-3" href="#">Max</a>
+
+    <ul class="nav">
+      <li class="nav-item">
+        <a 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}"
+          routerLink="/" 
+          class="nav-link">
+            Home
+          </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          routerLinkActive="active" 
+          routerLink="/hit"
+          class="nav-link">Hit
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          routerLinkActive="active" 
+          routerLink="/food"  
+          class="nav-link">Food
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          routerLinkActive="active" 
+          routerLink="/angular"  
+          class="nav-link">Angular
+        </a>
+      </li>
+    </ul>
+</nav>
+<app-breadcrumb>
+</app-breadcrumb>

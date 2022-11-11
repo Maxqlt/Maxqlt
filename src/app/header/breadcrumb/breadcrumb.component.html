@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li *ngFor="let breadcrumb of breadcrumbs" 
+              class="breadcrumb-item"
+            >
+                <a [routerLink]="BreadcrumbService.urlParams.path">{{BreadcrumbService.urlParams.title}}</a>
+            </li>
+          </ol>
+        </nav>
+    </div>
+  </div>
+</div>
