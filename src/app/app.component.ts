@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { approuteService } from './services/approute.service';
+import { BreadcrumbService } from './service/Breadcrumb.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[approuteService]
+  providers: [BreadcrumbService]
 })
 export class AppComponent  implements OnInit{
   title = 'Maxqlt';
   breadcrumbs: {path: string, title: string}[] = [];
 
-  constructor(private aRouteService: approuteService){
+  constructor(){
 
   }
   ngOnInit(): void {
-    this.breadcrumbs = this.aRouteService.urlParams;
+    
   }
 }

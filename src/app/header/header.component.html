@@ -1,16 +1,13 @@
 <nav class="navbar navbar-expand navbar-light ">
-    <a class="navbar-brand mx-3" href="#">Max</a>
+    <a 
+      class="navbar-brand mx-3" 
+      routerLink="/"
+      routerLinkActive="active" 
+      [routerLinkActiveOptions]="{exact: true}">
+        Max
+    </a>
 
     <ul class="nav">
-      <li class="nav-item">
-        <a 
-          routerLinkActive="active" 
-          [routerLinkActiveOptions]="{exact: true}"
-          routerLink="/" 
-          class="nav-link">
-            Home
-          </a>
-      </li>
       <li class="nav-item">
         <a 
           routerLinkActive="active" 

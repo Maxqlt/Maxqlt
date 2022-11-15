@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { approuteService } from 'src/app/services/approute.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Breadcrumb } from 'src/app/model/breadcrumb.model';
+import { BreadcrumbService } from 'src/app/service/Breadcrumb.service';
 
 @Component({
   selector: 'app-test-service',
@@ -9,17 +11,14 @@ import { ActivatedRoute } from '@angular/router';
   providers:[]
 })
 export class TestServiceComponent implements OnInit {
+  breadcrumbs$: Observable<Breadcrumb[]>;
 
-  constructor(public BreadcrumbService: approuteService, private aRoute: ActivatedRoute) { }
+  constructor(private readonly breadcrumbService: BreadcrumbService) {
+    this.breadcrumbs$ = breadcrumbService.breadcrumbs$;
+  }
 
   ngOnInit(): void {
-    const subscribedARoute = this.aRoute.snapshot.routeConfig
-    // const subscribedARoute = this.aRoute.params.subscribe((params)=>{
-    //   this.BreadcrumbService.getUrl(params);
-    // })
-
     
-    this.BreadcrumbService.getUrl(subscribedARoute);
   }
   
 }

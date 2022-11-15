@@ -12,6 +12,8 @@ import { AngularTestsComponent } from './pages/angular-tests/angular-tests.compo
 
 import { AppRoutingModule } from './app-routing.module';
 import { TestServiceComponent } from './pages/angular-tests/test-service/test-service.component';
+import { BreadcrumbService } from './service/Breadcrumb.service';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +24,13 @@ import { TestServiceComponent } from './pages/angular-tests/test-service/test-se
     HitPageComponent,
     FoodPageComponent,
     AngularTestsComponent,
-    TestServiceComponent
+    TestServiceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BreadcrumbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

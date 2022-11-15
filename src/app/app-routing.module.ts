@@ -9,13 +9,13 @@ import { TestServiceComponent } from "./pages/angular-tests/test-service/test-se
 
 const appRoutes: Routes = [
 
-    { path: '', component: HomeComponent, title: 'Home'},
-    { path: 'hit', component: HitPageComponent, title: 'Hit' },
-    { path: 'food', component: FoodPageComponent, title: 'Food' },
-    { path: 'angular', component: AngularTestsComponent, title: 'Angular',
+    { path: '', component: HomeComponent, title: 'Home', data: { breadcrumb: 'Home' }}, 
+    { path: 'hit', component: HitPageComponent, title: 'Hit', data: { breadcrumb: 'Hit' }},
+    { path: 'food', component: FoodPageComponent, title: 'Food', data: { breadcrumb: 'Food' }},
+    { path: 'angular', component: AngularTestsComponent, title: 'Angular', data: { breadcrumb: 'Angular' },
         children:[
-            { path: 'testService', component: TestServiceComponent, title: 'Testservice' },
-            
+            { path: 'testService', component: TestServiceComponent, title: 'Testservice', data: { breadcrumb: 'TestService' } },
+            // data: { breadcrumb: (data: any) => `${data.user.name}` }, use: getLabel(data: Data) in component data[user: name]
         ]
     },
     

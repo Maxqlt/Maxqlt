@@ -1,12 +1,10 @@
 <p>Der service soll mir infos über den Path ausgeben die ich hier dann displaye:</p>
 <p>In Zukunft eingebunden in der Breadcrumb component!</p>
 <div>
-    <ul>
-        <li>
-            Path: {{this.BreadcrumbService.urlParams.path}}
-        </li>
-        <li>
-            Title: {{this.BreadcrumbService.urlParams.title}}
-        </li>
+    <ul >
+        <li *ngFor="let breadcrumb of (breadcrumbs$ | async)">
+            Lable: {{breadcrumb.label}}  <br>
+            Path: {{breadcrumb.url }}
+          </li>
     </ul>
 </div>

@@ -1,6 +1,6 @@
 .breadcrumb-item + .breadcrumb-item::before {
-    content: var(--bs-breadcrumb-divider, ">") ;
-}
-.breadcrumb-item {
-    font-weight: 400;
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+  content: var(--bs-breadcrumb-divider, ">") ;
 }

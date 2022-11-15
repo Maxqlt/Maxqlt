@@ -2,13 +2,11 @@
   <div class="row">
     <div class="col-12">
       <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li *ngFor="let breadcrumb of breadcrumbs" 
-              class="breadcrumb-item"
-            >
-                <a [routerLink]="BreadcrumbService.urlParams.path">{{BreadcrumbService.urlParams.title}}</a>
+          <ul class="breadcrumb">
+            <li *ngFor="let breadcrumb of (breadcrumbs$ | async)" class="breadcrumb-item">
+              <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
             </li>
-          </ol>
+          </ul>
         </nav>
     </div>
   </div>

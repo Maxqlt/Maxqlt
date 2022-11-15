@@ -1,33 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Breadcrumb } from './breadcrumb.model';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { approuteService } from 'src/app/services/approute.service';
+import { Observable } from 'rxjs';
+
+import { Breadcrumb } from '../../model/breadcrumb.model';
+import { BreadcrumbService } from '../../service/Breadcrumb.service';
 
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
-  styleUrls: ['./breadcrumb.component.css'],
-  providers:[]
+  styleUrls: ['./breadcrumb.component.css']
 })
-export class BreadcrumbComponent implements OnInit {
-  breadcrumbs: Breadcrumb[] = []
+export class BreadcrumbComponent implements OnInit{
 
-  constructor(
-      public BreadcrumbService: approuteService
+  breadcrumbs$: Observable<Breadcrumb[]>;
 
-    ) {
-     
-   }
-
-  ngOnInit(){
-    
-    this.breadcrumbs = [
-      new Breadcrumb('Home','/'),
-      new Breadcrumb('Angular','/angular'),
-      new Breadcrumb('Breadcrumb','/breadcrumb'),
-    ]
-
+  constructor(private readonly breadcrumbService: BreadcrumbService) {
+    this.breadcrumbs$ = breadcrumbService.breadcrumbs$;
+  }
+  ngOnInit(): void {
     
   }
-
+  
 }
