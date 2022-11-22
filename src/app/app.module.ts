@@ -13,6 +13,8 @@ import { AngularTestsComponent } from './pages/angular-tests/angular-tests.compo
 import { AppRoutingModule } from './app-routing.module';
 import { TestServiceComponent } from './pages/angular-tests/test-service/test-service.component';
 import { BreadcrumbService } from './service/Breadcrumb.service';
+import { LoginComponent } from './header/login/login.component';
+import { AuthComponent } from './Pages/angular-tests/auth/auth.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { BreadcrumbService } from './service/Breadcrumb.service';
     FoodPageComponent,
     AngularTestsComponent,
     TestServiceComponent,
+    LoginComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,

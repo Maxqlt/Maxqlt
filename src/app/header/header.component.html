@@ -7,7 +7,7 @@
         Max
     </a>
 
-    <ul class="nav">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item">
         <a 
           routerLinkActive="active" 
@@ -26,10 +26,17 @@
         <a 
           routerLinkActive="active" 
           routerLink="/angular"  
-          class="nav-link">Angular
+          class="nav-link"
+          [routerLinkActiveOptions]="{exact: true}">Angular          
         </a>
       </li>
     </ul>
+    
+    <form class="d-flex">
+      <input class="form-control me-2" type="Username" placeholder="Username" aria-label="Username" size="8">
+      <input class="form-control " type="password" placeholder="password" aria-label="password" size="8">
+      <button class="btn btn-primary mx-2" type="submit">Login</button>
+    </form>
 </nav>
 <app-breadcrumb>
 </app-breadcrumb>
