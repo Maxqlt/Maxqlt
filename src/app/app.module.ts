@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { TestServiceComponent } from './pages/angular-tests/test-service/test-service.component';
 import { BreadcrumbService } from './service/Breadcrumb.service';
 import { LoginComponent } from './header/login/login.component';
-import { AuthComponent } from './Pages/angular-tests/auth/auth.component';
+import { AuthComponent } from './pages/angular-tests/auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 
 @NgModule({
@@ -29,10 +32,14 @@ import { AuthComponent } from './Pages/angular-tests/auth/auth.component';
     TestServiceComponent,
     LoginComponent,
     AuthComponent,
+    LoadingSpinnerComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [BreadcrumbService],
   bootstrap: [AppComponent]

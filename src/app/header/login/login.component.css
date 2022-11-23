@@ -1,0 +1,23 @@
+form{
+    margin-top: 0.4rem;
+    align-self: center;
+    margin-right: 0.5rem;
+    color: aliceblue;
+}
+input::placeholder {
+    color: var(--bs-gray-600);
+}
+.form-control{
+    font-size: small;
+    padding: 0.2rem 1rem;
+    background-color: var(--bs-gray-800);
+    color: var(--bs-gray-400);
+    border: 0px solid var(--bis-gray-1000);
+    align-self: center;
+    
+}
+.btn{
+    padding: 0rem 0.3rem;
+    font-size: small;
+    
+}

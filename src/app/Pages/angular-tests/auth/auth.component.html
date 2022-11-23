@@ -1,17 +1,24 @@
 <div class="row">
-    <h1>Sign up here:</h1>
+    <h1 class="text-center">Sign up here:</h1>
     <div class="col-6 offset-3">
-        <form>
+        <div *ngIf="isLoading" class="text-center">
+            <app-loading-spinner>
+            </app-loading-spinner>
+        </div>
+        <div class="alert alert-warning " *ngIf="error"> 
+            <p class="text-center">{{ error }}</p>
+        </div>
+        <form #signUpForm="ngForm" (ngSubmit)="OnSubmit(signUpForm)" *ngIf="!isLoading">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" class="form-control">
+                <label for="username">Email:</label>
+                <input type="text" id="email" class="form-control" name="email" ngModel required email>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" class="form-control">
+                <input type="password" id="password" class="form-control" name="password" ngModel required minlength="6">
             </div>
             <div class="mt-1">
-                <button class="btn btn-primary">
+                <button class="btn btn-primary" [disabled]="!signUpForm.valid">
                     Sign up!
                 </button>
             </div>
