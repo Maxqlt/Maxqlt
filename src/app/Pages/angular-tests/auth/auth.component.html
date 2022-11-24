@@ -5,8 +5,8 @@
             <app-loading-spinner>
             </app-loading-spinner>
         </div>
-        <div class="alert alert-warning " *ngIf="error"> 
-            <p class="text-center">{{ error }}</p>
+        <div class="alert alert-warning " *ngIf="errorMSG"> 
+            <p class="text-center">{{ errorMSG }}</p>
         </div>
         <form #signUpForm="ngForm" (ngSubmit)="OnSubmit(signUpForm)" *ngIf="!isLoading">
             <div class="form-group">
@@ -23,5 +23,14 @@
                 </button>
             </div>
         </form>
-    </div>
+        <hr>
+        <div>
+            <h2>
+                Notes:
+            </h2>
+            <p>
+                
+            </p>
+        </div>
+    </div>    
 </div>

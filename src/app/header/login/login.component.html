@@ -1,6 +1,21 @@
 <form class="d-flex" #headerLogin="ngForm" (ngSubmit)="OnSubmit(headerLogin)">
-    <input class="form-control me-2" type="email" placeholder="email" aria-label="email" size="8" ngModel name="email" required email>
-    <input class="form-control " type="password" placeholder="password" aria-label="password" size="8" ngModel name="password" required minlength="6">
-    <button class="btn btn-primary mx-2" type="submit" [disabled]="!headerLogin.valid">Login</button>
-    <button class="btn btn-primary" type="button" routerLink="/angular/auth">SignUp</button>
+    <input class="form-control me-2" type="email" placeholder="email" aria-label="email" size="8" ngModel name="email" required email *ngIf="!isLoggedIn">
+    <input 
+        class="form-control" 
+        type="password" 
+        placeholder="password" 
+        aria-label="password" 
+        size="8" 
+        ngModel 
+        name="password" 
+        required 
+        minlength="6" 
+        *ngIf="!isLoggedIn"
+    >
+    <button class="btn btn-primary mx-2" type="submit" [disabled]="!headerLogin.valid" *ngIf="!isLoggedIn" >Login</button>
+    <button class="btn btn-primary" type="button" routerLink="/angular/auth"  *ngIf="!isLoggedIn" >SignUp</button>
+
+    <button class="btn btn-primary" type="button" *ngIf="isLoggedIn">Profile</button>
+    <button class="btn btn-primary" type="button" *ngIf="isLoggedIn" (click)="onLogout()">Logout</button>
+    
 </form>

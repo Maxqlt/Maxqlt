@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/service/Auth.service';
 
 @Component({
@@ -7,15 +8,20 @@ import { AuthService } from 'src/app/service/Auth.service';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent implements OnInit, OnDestroy {
   isLoading = false;
-  error: string = this.authService.error;;
+
+  errorSub2: any = this.authService.errorSub.value;
+  public errorSub: Subscription;
+  errorMSG: string = null;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    if(this.authService.error){
-    }
+    this.errorSub = this.authService.errorSub.subscribe(error=>{
+      console.log('OnInit', error);
+      this.errorMSG = error;
+    });
   }
   OnSubmit(form: NgForm){
     if(!form.valid){
@@ -32,8 +38,7 @@ export class AuthComponent implements OnInit {
         this.isLoading = false;
       },
         error: (error) => {
-          console.log('error', error);
-          this.error = error;
+          this.authService.errorSub.next(error);
           this.isLoading = false;
         },
         complete: () => console.log('Sign success!')
@@ -41,5 +46,8 @@ export class AuthComponent implements OnInit {
     );
   
 
+  }
+  ngOnDestroy(): void {
+    this.errorSub.unsubscribe();
   }
 }

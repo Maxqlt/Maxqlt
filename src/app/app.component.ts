@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './service/Auth.service';
 import { BreadcrumbService } from './service/Breadcrumb.service';
 
 @Component({
@@ -11,10 +12,10 @@ export class AppComponent  implements OnInit{
   title = 'Maxqlt';
   breadcrumbs: {path: string, title: string}[] = [];
 
-  constructor(){
+  constructor(private authService: AuthService){
 
   }
   ngOnInit(): void {
-    
+    this. authService.autoLogin();
   }
 }
