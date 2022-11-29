@@ -1,0 +1,124 @@
+/* 
+$color: #ffe9e9;
+$color-dark: darken($color, 10%);
+$color-border: rgba(darken($color, 60%), .45);
+$color-text: darken($color, 85%); 
+*/
+
+button {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    line-height: 1;
+    min-height: 5vh;
+}
+
+#b1 {
+    background: black;
+    border-radius: 3em;
+    border: 0;
+    border: 3px solid var(--bs-gray-400);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 1.25em 2em;
+    position: relative;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+}
+
+#b1::before {
+    background: red;
+    border-radius: inherit;
+    box-shadow:
+        0 0 0 2px pink,
+        0 .6em 0 0 rgba(yellow, .6);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate3d(0, .75em, -1em);
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+    width: 100%;
+}
+
+#b1:hover {
+    transform: translate(0, .25em);
+}
+
+#b1:hover::before {
+    box-shadow:
+        0 0 0 2px pink,
+        0 .45em 0 0 rgba(black, .8);
+    transform: translate3d(0, .5em, -1em);
+}
+
+#b1:active {
+    background: black;
+    transform: translate(0, .75em);
+
+
+}
+
+#b1:active::before {
+    box-shadow:
+        0 0 0 3px pink,
+        0 0 yellow;
+    transform: translate3d(0, 0, -1em);
+}
+
+/* -------- */
+#b2 {
+    background-image: url('https://img.freepik.com/free-photo/stone-texture_1194-5558.jpg?w=996&t=st=1669729527~exp=1669730127~hmac=d1af1b887dc848f22869590b3ae4fb0b5108ea446bae9591923e211d1e133ac2');
+    background-size: 100px;
+    border-radius: 0.6em;
+    border: 0;
+    height: 10%;
+    border: 1px solid var(--bs-gray-800);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 1.25em 2em;
+    position: relative;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+}
+
+#b2::before {
+    background-image: url('https://img.freepik.com/free-photo/stone-texture_1194-5558.jpg?w=996&t=st=1669729527~exp=1669730127~hmac=d1af1b887dc848f22869590b3ae4fb0b5108ea446bae9591923e211d1e133ac2');
+    background-size: 100px;
+    border-radius: 0em;
+    border-radius: inherit;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate3d(0, .75em, -2em);
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+    width: 100%;
+}
+
+#b2:hover {
+    transform: translate(0, .25em);
+}
+
+#b2:hover::before {
+    transform: translate3d(0, .5em, -1em);
+}
+
+#b2:active {
+    transform: translate(0, 0em);
+
+
+}
+
+#b1:active::before {
+    transform: translate3d(0, 0em, -1em);
+}

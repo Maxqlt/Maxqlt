@@ -18,6 +18,8 @@ import { BreadcrumbService } from './service/Breadcrumb.service';
 import { LoginComponent } from './header/login/login.component';
 import { AuthComponent } from './pages/angular-tests/auth/auth.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { ForbiddenComponent } from './Pages/angular-tests/forbidden/forbidden.component';
+import { CssButtonsComponent } from './Pages/angular-tests/css-buttons/css-buttons.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     LoginComponent,
     AuthComponent,
     LoadingSpinnerComponent,
+    ForbiddenComponent,
+    CssButtonsComponent,
 
   ],
   imports: [
