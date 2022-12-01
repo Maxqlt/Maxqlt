@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 import { AppComponent } from './app.component';
@@ -15,8 +16,8 @@ import { TestServiceComponent } from './pages/angular-tests/test-service/test-se
 import { LoginComponent } from './header/login/login.component';
 import { AuthComponent } from './pages/angular-tests/auth/auth.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
-import { ForbiddenComponent } from './Pages/angular-tests/forbidden/forbidden.component';
-import { CssButtonsComponent } from './Pages/angular-tests/css-buttons/css-buttons.component';
+import { ForbiddenComponent } from './pages/angular-tests/forbidden/forbidden.component';
+import { CssButtonsComponent } from './pages/angular-tests/css-buttons/css-buttons.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -45,6 +46,7 @@ import { BreadcrumbService } from './service/Breadcrumb.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [BreadcrumbService],
   bootstrap: [AppComponent]

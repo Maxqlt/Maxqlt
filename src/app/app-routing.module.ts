@@ -8,8 +8,8 @@ import { HomeComponent } from "./home/home.component";
 import { TestServiceComponent } from "./pages/angular-tests/test-service/test-service.component";
 import { AuthComponent } from "./pages/angular-tests/auth/auth.component";
 import { ForbiddenComponent } from "./pages/angular-tests/forbidden/forbidden.component";
-import { AuthGuard } from "./Pages/angular-tests/auth/auth.guard";
-import { CssButtonsComponent } from "./Pages/angular-tests/css-buttons/css-buttons.component";
+import { AuthGuard } from "./pages/angular-tests/auth/auth.guard";
+import { CssButtonsComponent } from "./pages/angular-tests/css-buttons/css-buttons.component";
 
 const appRoutes: Routes = [
 
