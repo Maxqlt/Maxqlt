@@ -11,15 +11,16 @@ import { BreadcrumbComponent } from './header/breadcrumb/breadcrumb.component';
 import { HitPageComponent } from './pages/hit-page/hit-page.component';
 import { FoodPageComponent } from './pages/food-page/food-page.component';
 import { AngularTestsComponent } from './pages/angular-tests/angular-tests.component';
-
-import { AppRoutingModule } from './app-routing.module';
 import { TestServiceComponent } from './pages/angular-tests/test-service/test-service.component';
-import { BreadcrumbService } from './service/Breadcrumb.service';
 import { LoginComponent } from './header/login/login.component';
 import { AuthComponent } from './pages/angular-tests/auth/auth.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { ForbiddenComponent } from './Pages/angular-tests/forbidden/forbidden.component';
 import { CssButtonsComponent } from './Pages/angular-tests/css-buttons/css-buttons.component';
+
+import { AppRoutingModule } from './app-routing.module';
+
+import { BreadcrumbService } from './service/Breadcrumb.service';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { CssButtonsComponent } from './Pages/angular-tests/css-buttons/css-butto
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [BreadcrumbService],
   bootstrap: [AppComponent]

@@ -11,5 +11,8 @@ export class CssButtonsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  status: boolean = false;
+  activate() {
+    this.status = !this.status;
+  }
 }
