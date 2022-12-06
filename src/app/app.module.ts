@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,8 @@ import { CssButtonsComponent } from './pages/angular-tests/css-buttons/css-butto
 import { AppRoutingModule } from './app-routing.module';
 
 import { BreadcrumbService } from './service/Breadcrumb.service';
+import { AnimationComponent } from './Pages/angular-tests/animation/animation.component';
+import { CollapsableComponent } from './Pages/angular-tests/animation/collapsable/collapsable.component';
 
 
 @NgModule({
@@ -39,6 +42,8 @@ import { BreadcrumbService } from './service/Breadcrumb.service';
     LoadingSpinnerComponent,
     ForbiddenComponent,
     CssButtonsComponent,
+    AnimationComponent,
+    CollapsableComponent,
 
   ],
   imports: [
@@ -46,7 +51,8 @@ import { BreadcrumbService } from './service/Breadcrumb.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [BreadcrumbService],
   bootstrap: [AppComponent]

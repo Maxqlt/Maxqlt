@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="my-4">No Annimation</h3>
+            <a *ngIf="!infoBox" class="reset" (click)="reset()">Reset</a>
+            <div 
+                *ngIf="infoBox"
+                class="c1 d-flex"
+            >
+                <p *ngIf="collapsed">
+                    This div is currently collapsed!
+                </p> 
+                <div *ngIf="!collapsed">
+                    <p >
+                        This div is currently Open!
+                    </p>
+                    <ul>
+                        <li>
+                            Points
+                        </li>
+                        <li>
+                            Points
+                        </li>
+                        <li>
+                            Points
+                        </li>
+                        <li>
+                            Points
+                        </li>
+                    </ul>
+                </div>
+                <a 
+                    *ngIf="collapsed"
+                    (click)="collapse()" 
+                    class="toogle"
+                ><fa-icon [icon]="ChevronDown"></fa-icon>
+                </a>
+                <a 
+                    *ngIf="!collapsed"
+                    (click)="collapse()" 
+                    class="toogle"
+                ><fa-icon [icon]="ChevronUp"></fa-icon>
+                </a>
+                <a 
+                    (click)="close()" 
+                    class="close"
+                ><fa-icon [icon]="Cross"></fa-icon>
+                </a>
+                
+            </div>
+            <h3 class="my-4">With Annimation</h3>
+            <app-collapsable></app-collapsable>
+            
+        </div>
+        
+        <hr class="my-3">
+        <button class="btn btn-primary w-25 mx-5 h-25"(click)="animatedBoxClick()"> Change</button>
+        <div 
+        [@divState]="state"
+        class="animated-box">
+
+        </div>
+    </div>
+</div>
+<p>

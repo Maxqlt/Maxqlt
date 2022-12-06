@@ -10,6 +10,7 @@ import { AuthComponent } from "./pages/angular-tests/auth/auth.component";
 import { ForbiddenComponent } from "./pages/angular-tests/forbidden/forbidden.component";
 import { AuthGuard } from "./pages/angular-tests/auth/auth.guard";
 import { CssButtonsComponent } from "./pages/angular-tests/css-buttons/css-buttons.component";
+import { AnimationComponent } from "./Pages/angular-tests/animation/animation.component";
 
 const appRoutes: Routes = [
 
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
             { path: 'auth', component: AuthComponent, title: 'Sign Up!', data: { breadcrumb: 'Sign up!' } },
             { path: '401', component: ForbiddenComponent, title: 'Forbidden!', data: { breadcrumb: 'Forbidden!' } },
             { path: 'css-buttons', component: CssButtonsComponent, title: 'css Buttons!', data: { breadcrumb: 'Css Buttons!' } },
+            { path: 'animations', component: AnimationComponent, title: 'Animations!', data: { breadcrumb: 'Animations!' } },
             // data: { breadcrumb: (data: any) => `${data.user.name}` }, use: getLabel(data: Data) in component data[user: name]
         ]
     },

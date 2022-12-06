@@ -1,0 +1,45 @@
+
+<a *ngIf="!infoBox2" class="reset" (click)="reset2()">Reset</a>
+<div  [@collapsable]="state" *ngIf="infoBox2" class="c2 d-flex"[ngClass]="state==='collapsed' ? 'toogle-closed' : 'toogle-open'">
+    <p   [@childanimation]="state" *ngIf="state == 'collapsed'"
+    >
+        This div is currently collapsed!
+    </p> 
+    <div [@childanimation]="state" *ngIf="state == 'normal'">
+        <p >
+            This div is currently Open!
+        </p>
+        <ul>
+            <li>
+                Points
+            </li>
+            <li>
+                Points
+            </li>
+            <li>
+                Points
+            </li>
+            <li>
+                Points
+            </li>
+        </ul>
+    </div>
+    <a 
+        *ngIf="collapsed2"
+        (click)="animatedBoxClick()" 
+        class="toogle2"
+    ><fa-icon [icon]="ChevronDown"></fa-icon>
+    </a>
+    <a 
+        *ngIf="!collapsed2"
+        (click)="animatedBoxClick()" 
+        class="toogle2"
+    ><fa-icon [icon]="ChevronUp"></fa-icon>
+    </a>
+    <a 
+        (click)="close2()" 
+        class="close2"
+    ><fa-icon [icon]="Cross"></fa-icon>
+    </a>
+    
+</div>
