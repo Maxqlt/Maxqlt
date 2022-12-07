@@ -7,26 +7,47 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <div class="collapsable">
-                collapsable
-            </div>
+            <app-infobox
+              [title]="'Quickguide: hit'"
+              [content]="{desc: 'test', list: ['bla bla',
+                                'blub blub',
+                                'ping pong',
+                                'ding dong',
+                                'ching chong',
+                                'pling plong'                  ]                }"
+              >
+            </app-infobox>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             Hit app
             <div class="row">
-                <div class="col-12">
-                    Run
+                <div class="col-6">
+                    Gear
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        Result
-                    </div>
+                <div class="col-6">
+                  <div class="row">
+                    talents
+                  </div>
+                  <div class="row">
+                    Raid Comp
+                  </div>
                 </div>
+
+            </div>
+            <div class="row">
+              <div class="col-12">
+                gems+enchants
+              </div>
             </div>
         </div>
+        <div class="row">
+          <div class="col-12">
+              Result
+          </div>
+      </div>
     </div>
-    
-    
+
+
 </div>

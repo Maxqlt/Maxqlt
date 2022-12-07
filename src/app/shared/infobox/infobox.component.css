@@ -1,0 +1,31 @@
+
+.arrow-btn{
+  cursor: pointer;
+  position: absolute;
+  top: 0.5em;
+  right: 3em;
+}
+.close-btn{
+  cursor: pointer;
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+}
+p{
+  margin: 0;
+}
+.closed{
+  min-height: 50px;
+
+}
+.open{
+  min-height: 200px;
+}
+div.closed, div.open{
+  background-color: #333333; ;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 1em;
+}

@@ -19,7 +19,7 @@ interface AuthResponseData{
 export class AuthService{
     public user = new BehaviorSubject<User>(null);
     private tokenExpirationTimer: any;
-    
+
     public errorSub = new BehaviorSubject<string>(null);
 
 
@@ -35,7 +35,7 @@ export class AuthService{
                 returnSecureToken: true
             }
         ).pipe(
-            catchError(this.handleError), 
+            catchError(this.handleError),
             tap(resData => {
                 this.handleAuthentication(
                     resData.email, resData.localId, resData.idToken, +resData.expiresIn
@@ -96,9 +96,9 @@ export class AuthService{
             new Date().getTime() + +expiresIn * 1000
         );
         const user = new User(
-            email, 
-            userId, 
-            token, 
+            email,
+            userId,
+            token,
             expirationDate
         );
         this.user.next(user);
@@ -113,7 +113,7 @@ export class AuthService{
             return throwError(errorMsg);
         }
         switch (errorRes.error.error.message){
-            
+
             case 'EMAIL_EXISTS':
                 errorMsg = 'This email allready exists';
                 break;
@@ -128,8 +128,8 @@ export class AuthService{
                 break;
         }
         // this.error.next('test');
-        
+
         return throwError(errorMsg);
     }
-    
+
 }

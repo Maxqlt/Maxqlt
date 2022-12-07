@@ -1,0 +1,34 @@
+<div  [@collapsable]="state" class="d-flex"[ngClass]="state==='collapsed' ? 'closed' : 'open'">
+    <p [@childanimation]="state" *ngIf="state == 'collapsed' && title"
+    >
+        {{title}}
+    </p>
+    <div [@childanimation]="state" *ngIf="state == 'normal' && content" >
+        <p *ngIf="content.desc">
+            {{content.desc}}
+        </p>
+        <ul>
+            <li *ngFor="let item of content.list">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <a
+        *ngIf="collapsed"
+        (click)="animatedBoxClick()"
+        class="arrow-btn"
+    ><fa-icon [icon]="ChevronDown"></fa-icon>
+    </a>
+    <a
+        *ngIf="!collapsed"
+        (click)="animatedBoxClick()"
+        class="arrow-btn"
+    ><fa-icon [icon]="ChevronUp"></fa-icon>
+    </a>
+    <a
+        (click)="close()"
+        class="close-btn"
+    ><fa-icon [icon]="Cross"></fa-icon>
+    </a>
+
+</div>

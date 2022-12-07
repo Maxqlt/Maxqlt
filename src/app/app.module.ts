@@ -26,6 +26,7 @@ import { BreadcrumbService } from './service/Breadcrumb.service';
 import { AnimationComponent } from './Pages/angular-tests/animation/animation.component';
 import { CollapsableComponent } from './Pages/angular-tests/animation/collapsable/collapsable.component';
 import { TTComponent } from './Pages/tt/tt.component';
+import { InfoboxComponent } from './shared/infobox/infobox.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { TTComponent } from './Pages/tt/tt.component';
     AnimationComponent,
     CollapsableComponent,
     TTComponent,
+    InfoboxComponent,
 
   ],
   imports: [
