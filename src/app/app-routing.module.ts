@@ -11,6 +11,7 @@ import { ForbiddenComponent } from "./pages/angular-tests/forbidden/forbidden.co
 import { AuthGuard } from "./pages/angular-tests/auth/auth.guard";
 import { CssButtonsComponent } from "./pages/angular-tests/css-buttons/css-buttons.component";
 import { AnimationComponent } from "./Pages/angular-tests/animation/animation.component";
+import { TTComponent } from "./Pages/tt/tt.component";
 
 const appRoutes: Routes = [
 
@@ -23,6 +24,12 @@ const appRoutes: Routes = [
         title: 'Hit',
         data: { breadcrumb: 'Hit' },
         canActivate: [AuthGuard]
+    },
+    {
+        path: 'telltale',
+        component: TTComponent,
+        title: 'Telltale',
+        data: { breadcrumb: 'Telltale' },
     },
     {
         path: 'food',

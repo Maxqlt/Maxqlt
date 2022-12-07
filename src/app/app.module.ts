@@ -25,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BreadcrumbService } from './service/Breadcrumb.service';
 import { AnimationComponent } from './Pages/angular-tests/animation/animation.component';
 import { CollapsableComponent } from './Pages/angular-tests/animation/collapsable/collapsable.component';
+import { TTComponent } from './Pages/tt/tt.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { CollapsableComponent } from './Pages/angular-tests/animation/collapsabl
     CssButtonsComponent,
     AnimationComponent,
     CollapsableComponent,
+    TTComponent,
 
   ],
   imports: [
