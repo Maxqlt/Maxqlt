@@ -48,8 +48,8 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
           }),
           style({
             'opacity': 0,
-            transform: 'translateY(-50px)',
-            offset: 0.2
+            transform: 'translateY(-5px)',
+            offset: 0.1
           }),
           style({
             'opacity': 1,

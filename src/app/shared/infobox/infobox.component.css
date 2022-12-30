@@ -22,7 +22,7 @@ p{
   min-height: 200px;
 }
 div.closed, div.open{
-  background-color: #333333; ;
+  background-color: #333333;
   border: 1px solid rgb(112, 112, 112);
   border-radius: 5px;
   padding: 1em;

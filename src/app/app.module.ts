@@ -27,6 +27,12 @@ import { AnimationComponent } from './Pages/angular-tests/animation/animation.co
 import { CollapsableComponent } from './Pages/angular-tests/animation/collapsable/collapsable.component';
 import { TTComponent } from './Pages/tt/tt.component';
 import { InfoboxComponent } from './shared/infobox/infobox.component';
+import { HitAppComponent } from './Pages/hit-page/components/hit-app/hit-app.component';
+import { GearComponent } from './Pages/hit-page/components/gear/gear.component';
+import { TalentsComponent } from './Pages/hit-page/components/talents/talents.component';
+import { RaidCompComponent } from './Pages/hit-page/components/raid-comp/raid-comp.component';
+import { EnchantsComponent } from './Pages/hit-page/components/enchants/enchants.component';
+import { ResultsComponent } from './Pages/hit-page/components/results/results.component';
 
 
 @NgModule({
@@ -48,6 +54,12 @@ import { InfoboxComponent } from './shared/infobox/infobox.component';
     CollapsableComponent,
     TTComponent,
     InfoboxComponent,
+    HitAppComponent,
+    GearComponent,
+    TalentsComponent,
+    RaidCompComponent,
+    EnchantsComponent,
+    ResultsComponent,
 
   ],
   imports: [

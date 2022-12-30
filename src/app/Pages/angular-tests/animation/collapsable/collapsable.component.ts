@@ -11,13 +11,13 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
   animations: [
     trigger('collapsable', [
       state('normal', style({
-      
+
         'height': '200px',
-        
+
         'opacity': 1
     })),
       state('collapsed', style({
-        'height':'50px',       
+        'height':'50px',
     })),
       transition('normal <=> collapsed', [
         group([
@@ -53,14 +53,9 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
             offset: 0
           }),
           style({
-            'opacity': 0.1,
-            transform: 'translateY(-50px)',
+            'opacity': 0,
+            transform: 'translateY(-25px)',
             offset: 0.3
-          }),
-          style({
-            'opacity': 0.8,
-            transform: 'translateY(-10px)',
-            offset: 0.8
           }),
           style({
             'opacity': 1,
@@ -86,18 +81,18 @@ export class CollapsableComponent {
   infoBox2 = true;
   state = 'collapsed';
 
- 
+
   collapse() {
     this.state == 'collapsed'
   }
-  open() { 
+  open() {
     this.state == 'normal'
   }
- 
+
   close2() {
     this.infoBox2 = false;
   }
- 
+
   reset2() {
     this.infoBox2 = true;
   }
